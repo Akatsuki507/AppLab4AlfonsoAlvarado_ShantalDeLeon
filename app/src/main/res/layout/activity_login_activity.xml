@@ -4,6 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login_activity">
+    tools:context=".sign_in">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#C5CAE9"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:text="Bienvenido Usuario"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#3f51b5"
+            android:textStyle="italic"
+
+            android:text="Ingresar Correo Electronico" />
+
+        <EditText
+            android:id="@+id/Usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+
+            android:hint="Nombre.Apellido@utp.ac.pa" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#3f51b5"
+            android:textStyle="italic"
+
+            android:text="Ingresar Contraseña" />
+
+        <EditText
+            android:id="@+id/Contraseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="Contraseña" />
+
+        <Button
+            android:id="@+id/Boton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="#1a237e"
+            android:textColor="#E3F2FD"
+            android:textSize="20sp"
+
+            android:text="Iniciar  sesión"
+            />
+
+
+        <TextView
+            android:text="¿No tienes cuenta?"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="italic"
+
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/Registrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="#1a237e"
+            android:textColor="#E3F2FD"
+            android:textSize="20sp"
+
+            android:text="Registraser"/>
+
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

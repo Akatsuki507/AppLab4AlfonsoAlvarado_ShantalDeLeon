@@ -6,4 +6,132 @@
     android:layout_height="match_parent"
     tools:context=".sign_in">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#C5CAE9"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="80dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#3f51b5"
+            android:text="Crear Usuario"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#3f51b5"
+            android:textStyle="italic"
+
+            android:text="Nombre" />
+
+        <EditText
+            android:id="@+id/nombre_registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="14dp"
+
+            android:hint="Nombre" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#3f51b5"
+            android:textStyle="italic"
+
+            android:text="Cédula" />
+
+        <EditText
+            android:id="@+id/cedula_registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="14dp"
+
+            android:hint="8-923-1345" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#3f51b5"
+            android:textStyle="italic"
+
+            android:text="Correo Electronico" />
+
+        <EditText
+            android:id="@+id/correo_registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="14dp"
+
+            android:hint="Nombre.Apellido@utp.ac.pa" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#3f51b5"
+            android:textStyle="italic"
+
+            android:text="Contraseña" />
+
+        <EditText
+            android:id="@+id/contraseña_registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="14dp"
+            android:hint="Contraseña" />
+
+
+        <Button
+            android:id="@+id/Boton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="#1a237e"
+            android:textColor="#E3F2FD"
+            android:textSize="20sp"
+
+            android:text="Enviar"/>
+
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

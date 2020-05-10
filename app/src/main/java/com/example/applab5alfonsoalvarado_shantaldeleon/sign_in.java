@@ -54,20 +54,20 @@ public class sign_in extends AppCompatActivity {
             retorno = false;
         }
         if (Cedula.isEmpty()) {
-            cedula.setError("Falta Cedula");
+            cedula.setError("Este Campo es requerido, Ingresar Nombre");
             retorno = false;
         }
         if (Correo.isEmpty()) {
-            correo.setError("Falta Correo");
+            correo.setError(" Este Campo es requerido, Ingresar Correo");
             retorno = false;
         }
         if (Contraseña.isEmpty()) {
-            contraseña.setError("Falta Contraseña");
+            contraseña.setError(" Este Campo es requerido, Ingresar  Contraseña");
             retorno = false;
         }
 
         if(!email && Correo != ""){
-            correo.setError("Correo inválido");
+            correo.setError(" Este Correo es  inválido");
             retorno = false;
         }
         return retorno;
