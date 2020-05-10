@@ -1,4 +1,4 @@
-package com.example.applab5alfonsoalvarado_shantaldeleon;
+package com.example.applab4alfonsoalvarado_shantaldeleon;
 
 import org.junit.Test;
 

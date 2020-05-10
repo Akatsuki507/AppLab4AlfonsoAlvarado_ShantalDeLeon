@@ -1,4 +1,4 @@
-package com.example.applab5alfonsoalvarado_shantaldeleon;
+package com.example.applab4alfonsoalvarado_shantaldeleon;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,7 +20,7 @@ public class Login_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login_activity);
 
         User = (EditText)findViewById(R.id.Usuario);
         pass = (EditText)findViewById(R.id.Contraseña);

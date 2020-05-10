@@ -1,4 +1,4 @@
-package com.example.applab5alfonsoalvarado_shantaldeleon;
+package com.example.applab4alfonsoalvarado_shantaldeleon;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,7 +30,7 @@ public class sign_in extends AppCompatActivity {
     public void Registro(View view) {
         if(Validar()) {
             Toast.makeText(this, "Registro Completo", Toast.LENGTH_SHORT).show();
-            Intent login = new Intent(this, MainActivity.class);
+            Intent login = new Intent(this, Login_activity.class);
             startActivity(login);
         }
     }
