@@ -32,7 +32,7 @@ public class Login_activity extends AppCompatActivity {
             public void onClick(View v) {
                 String USR = User.getText().toString();
                 String PASS = pass.getText().toString();
-                if (USR.equals("G_Z@utp.ac.pa") && PASS.equals("12345")){
+                if (USR.equals("nombre@utp.ac.pa") && PASS.equals("12345")){
 
                     Intent i = new Intent(getApplicationContext(),welcome.class);
                     startActivity(i);
