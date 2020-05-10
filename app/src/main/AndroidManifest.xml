@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.applab4alfonsoalvarado_shantaldeleon">
+    package="com.example.applab5alfonsoalvarado_shantaldeleon">
 
     <application
         android:allowBackup="true"
@@ -10,15 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".sign_in"></activity>
-        <activity android:name=".welcome" />
-        <activity android:name=".Login_activity">
+        <activity android:name="com.example.applab5alfonsoalvarado_shantaldeleon.welcome" />
+        <activity android:name="com.example.applab5alfonsoalvarado_shantaldeleon.Login_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.applab5alfonsoalvarado_shantaldeleon.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

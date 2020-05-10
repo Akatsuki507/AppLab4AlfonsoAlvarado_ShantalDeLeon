@@ -1,14 +1,15 @@
-package com.example.applab4alfonsoalvarado_shantaldeleon;
+package com.example.applab5alfonsoalvarado_shantaldeleon;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class welcome extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_welcome);
     }
 }
+
