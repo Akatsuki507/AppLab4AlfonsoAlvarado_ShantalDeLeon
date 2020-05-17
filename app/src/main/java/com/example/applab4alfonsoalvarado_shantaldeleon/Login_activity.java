@@ -8,8 +8,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -17,12 +19,14 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Login_activity extends AppCompatActivity {
     ArrayList<user> users;
     private EditText User,pass;
     private Button Btn,Btn2;
+    Spinner spinner2;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -32,6 +36,11 @@ public class Login_activity extends AppCompatActivity {
         loadData();
         User = (EditText)findViewById(R.id.Usuario);
         pass = (EditText)findViewById(R.id.Contraseña);
+         final Spinner spinners = (Spinner) findViewById(R.id.spinner2);
+        ArrayAdapter<String> adapterList = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,
+                loadSpinnerRoles2());
+        spinners.setAdapter(adapterList);
+
         Btn = (Button)findViewById(R.id.Boton);
         Btn2 =(Button)findViewById(R.id.Registrar);
 
@@ -40,13 +49,15 @@ public class Login_activity extends AppCompatActivity {
             public void onClick(View v) {
                 String USR = User.getText().toString();
                 String PASS = pass.getText().toString();
-                if (verificar(USR, PASS)){
-                    Intent i = new Intent(getApplicationContext(),welcome.class);
-                    startActivity(i);
+                String ROL = spinners.getSelectedItem().toString();
+                if (verificar(USR, PASS,ROL)){
+                    if(ROL.equals("Usuario Corriente")) {
+                        Intent i = new Intent(getApplicationContext(), welcome.class);
+                        startActivity(i);
+                    }
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"Usuario o Contraseña Erronea",Toast.LENGTH_SHORT).show();
-                }
+                    Toast.makeText(getApplicationContext(),"Usuario o Contraseña Erronea",Toast.LENGTH_SHORT).show(); }
             }
         });
 
@@ -58,6 +69,13 @@ public class Login_activity extends AppCompatActivity {
             }
         });
 
+    }
+    public List<String> loadSpinnerRoles2() {
+        List<String> Roles = new ArrayList<String>();
+        Roles.add("Seleccione un Rol");
+        Roles.add("Usuario Corriente");
+        Roles.add("Usuario Administrador");
+        return Roles;
     }
 
     private void saveCurrent_user(user usuario){
@@ -86,9 +104,9 @@ public class Login_activity extends AppCompatActivity {
         }
     }
 
-    private boolean verificar(String email, String pass){
+    private boolean verificar(String email, String pass,String rol ){
         for (int counter = 0; counter < users.size(); counter++) {
-            if((users.get(counter).email.equals(email)) && (users.get(counter).pass.equals(pass))){
+            if((users.get(counter).email.equals(email)) && (users.get(counter).pass.equals(pass)) && (users.get(counter).rol.equals(rol)) ){
                 saveCurrent_user(users.get(counter));
                 return true;
             }
