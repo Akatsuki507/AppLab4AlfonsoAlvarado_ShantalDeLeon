@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Looper;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -28,8 +29,17 @@ public class welcome extends AppCompatActivity {
         Type type = new TypeToken<user>(){}.getType();
         usuario = gson.fromJson(json, type);
 
-        Log.i("USUARIO", "USUARIO: " + usuario + "EMAIL: " + usuario.email + "----" + "NOMBRE: " + usuario.nombre);
+        Log.i("USUARIO", "USUARIO: " + usuario + "EMAIL: " + usuario.email + "----" + "NOMBRE: " + usuario.nombre + usuario.pass + usuario.rol);
 
+    }
+
+
+    public void verificar_rol(){
+        if(usuario.rol.equals("ADMIN")){
+            //que haga esa mamada
+        }else{
+            //No hagas esa mamada
+        }
     }
 }
 

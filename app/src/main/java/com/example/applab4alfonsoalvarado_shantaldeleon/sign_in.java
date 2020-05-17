@@ -54,9 +54,10 @@ public class sign_in extends AppCompatActivity {
             String Cedula = cedula.getText().toString();
             String Correo = correo.getText().toString();
             String Contraseña = contraseña.getText().toString();
+            boolean origen = true;
 
             loadData();
-            user nuevo_usuario = new user(Correo,Contraseña,Nombre,Cedula, "usuario");
+            user nuevo_usuario = new user(Correo,Contraseña,Nombre,Cedula, "usuario", origen);
             users.add(nuevo_usuario);
             saveData();
             Toast.makeText(this, "Registro Completo", Toast.LENGTH_SHORT).show();
