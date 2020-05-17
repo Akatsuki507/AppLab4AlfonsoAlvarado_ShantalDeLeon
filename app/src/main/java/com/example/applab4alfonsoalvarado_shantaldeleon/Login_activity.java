@@ -3,7 +3,9 @@ package com.example.applab4alfonsoalvarado_shantaldeleon;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,15 +32,31 @@ public class Login_activity extends AppCompatActivity {
         Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                SharedPreferences pref = getSharedPreferences("login", Context.MODE_PRIVATE);
+                String UserRegistrado = pref.getString("email","N/R");
+                String passRegistrado = pref.getString("password","n/r");
                 String USR = User.getText().toString();
                 String PASS = pass.getText().toString();
-                if (USR.equals("nombre@utp.ac.pa") && PASS.equals("12345")){
 
-                    Intent i = new Intent(getApplicationContext(),welcome.class);
-                    startActivity(i);
+
+                if (UserRegistrado.equals("N/R")){
+                    Toast.makeText(getApplicationContext()," No existe Usuario o Contraseña",Toast.LENGTH_SHORT).show();
+
+
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"Usuario o Contraseña Erronea",Toast.LENGTH_SHORT).show();
+                    if(UserRegistrado.equals(USR) && passRegistrado.equals(PASS) ){
+                        Toast.makeText(getApplicationContext(),"Usuario correcto",Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(getApplicationContext(),welcome.class);
+                        startActivity(i);
+
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(),"Usuario o Contraseña Erronea",Toast.LENGTH_SHORT).show();
+                    }
+
                 }
             }
         });

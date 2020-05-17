@@ -2,17 +2,23 @@ package com.example.applab4alfonsoalvarado_shantaldeleon;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.regex.Pattern;
 public class sign_in extends AppCompatActivity {
 
     EditText nombre, cedula ,correo, contraseña;
+    private TextView nName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,13 +27,13 @@ public class sign_in extends AppCompatActivity {
         this.Inicializar();
     }
     private void Inicializar(){
-        nombre=(EditText)findViewById(R.id.nombre_registro);
-        cedula=(EditText)findViewById(R.id.cedula_registro);
-        correo=(EditText)findViewById(R.id.correo_registro);
-        contraseña=(EditText)findViewById(R.id.contraseña_registro);
+        nombre=findViewById(R.id.nombre_registro);
+        cedula=findViewById(R.id.cedula_registro);
+        correo=findViewById(R.id.correo_registro);
+        contraseña=findViewById(R.id.contraseña_registro);
     }
 
-    public void Registro(View view) {
+    public void Registro (View view) {
         if(Validar()) {
             Toast.makeText(this, "Registro Completo", Toast.LENGTH_SHORT).show();
             Intent login = new Intent(this, Login_activity.class);
@@ -48,6 +54,20 @@ public class sign_in extends AppCompatActivity {
         String Contraseña = contraseña.getText().toString();
 
         boolean email= pattern.matcher(Correo).matches();
+
+        SharedPreferences pref = getSharedPreferences("login", Context.MODE_PRIVATE);
+        SharedPreferences.Editor edit = pref.edit();
+        edit.putString("user",Nombre);
+        edit.putString("identity",Cedula);
+        edit.putString("email",Correo);
+
+        edit.commit();
+
+
+
+
+
+
 
         if (Nombre.isEmpty()) {
             nombre.setError("Falta Nombre");
