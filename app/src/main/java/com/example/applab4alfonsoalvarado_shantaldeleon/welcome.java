@@ -2,6 +2,7 @@ package com.example.applab4alfonsoalvarado_shantaldeleon;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Looper;
@@ -10,10 +11,13 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class welcome extends AppCompatActivity {
+    ArrayList<user> users;
+    ArrayList<user> users_archive;
     user usuario;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +34,6 @@ public class welcome extends AppCompatActivity {
         usuario = gson.fromJson(json, type);
 
         Log.i("USUARIO", "USUARIO: " + usuario + "EMAIL: " + usuario.email + "----" + "NOMBRE: " + usuario.nombre + usuario.pass + usuario.rol);
-
     }
 
 
