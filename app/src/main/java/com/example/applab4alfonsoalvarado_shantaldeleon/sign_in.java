@@ -60,7 +60,7 @@ public class sign_in extends AppCompatActivity {
         Roles.add("Usuario Corriente");
         Roles.add("Usuario Administrador");
 
-        ArrayAdapter<String> adapterList = new ArrayAdapter<String>(sign_in.this, android.R.layout.simple_spinner_item,Roles);
+        ArrayAdapter<String> adapterList = new ArrayAdapter<String>(sign_in.this, android.R.layout.simple_spinner_dropdown_item,Roles);
         spinner1.setAdapter(adapterList);
         ValidarSpinner (spinner1);
     }
