@@ -41,7 +41,6 @@ public class Login_activity extends AppCompatActivity {
                 String USR = User.getText().toString();
                 String PASS = pass.getText().toString();
                 if (verificar(USR, PASS)){
-
                     Intent i = new Intent(getApplicationContext(),welcome.class);
                     startActivity(i);
                 }
@@ -59,6 +58,18 @@ public class Login_activity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void saveCurrent_user(user usuario){
+        SharedPreferences sharepreferences = getSharedPreferences("shared preference", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharepreferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(usuario);
+        editor.putString("current_user", json);
+        editor.apply();
+        loadData();
+
+        Log.i("ADVERTENCIA", users.get(0).email);
     }
     public void loadData(){
         SharedPreferences sharepreferences = getSharedPreferences("shared preference", MODE_PRIVATE);
@@ -78,6 +89,7 @@ public class Login_activity extends AppCompatActivity {
     private boolean verificar(String email, String pass){
         for (int counter = 0; counter < users.size(); counter++) {
             if((users.get(counter).email.equals(email)) && (users.get(counter).pass.equals(pass))){
+                saveCurrent_user(users.get(counter));
                 return true;
             }
         }
