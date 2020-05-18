@@ -172,7 +172,7 @@ public class sign_in extends AppCompatActivity {
         if (spinner1.getSelectedItem() != null){
             Toast.makeText(getApplicationContext(), "Algo seleccionado", Toast.LENGTH_LONG).show();
 
-//Si el spinner no tiene nada seleccionado
+            //Si el spinner no tiene nada seleccionado
         }else{
             Toast.makeText(getApplicationContext(), "Nada selecccionado", Toast.LENGTH_LONG).show();
         }

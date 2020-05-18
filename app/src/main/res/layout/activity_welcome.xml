@@ -180,30 +180,11 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000"
             android:textStyle="italic"/>
-        <Button
-            android:id="@+id/Registrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20px"
-            android:background="#1a237e"
-            android:textColor="#E3F2FD"
-            android:textSize="20sp"
-            android:text="Registrar Usuario"/>
 
 
 
 
-        <Button
-            android:id="@+id/sign_in_admin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="#1a237e"
-            android:text="REGISTRAR USUARIO"
-            android:textColor="#E3F2FD"
-            android:textSize="20sp" />
+
 
 
     </LinearLayout>
