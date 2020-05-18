@@ -86,7 +86,7 @@ public class sign_in extends AppCompatActivity {
 
 
             loadData();
-            user nuevo_usuario = new user(Correo, Contraseña, Nombre, Rol, Cedula,origen);
+            user nuevo_usuario = new user(Correo, Contraseña, Nombre, Cedula , Rol,origen);
             users.add(nuevo_usuario);
             saveData();
             Toast.makeText(this, "Registro Completo", Toast.LENGTH_SHORT).show();
