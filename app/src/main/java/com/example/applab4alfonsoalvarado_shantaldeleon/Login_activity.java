@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -36,7 +35,6 @@ public class Login_activity extends AppCompatActivity {
         loadData();
         User = (EditText)findViewById(R.id.Usuario);
         pass = (EditText)findViewById(R.id.Contraseña);
-         final Spinner spinners = (Spinner) findViewById(R.id.spinner2);
 
 
         Btn = (Button)findViewById(R.id.Boton);
