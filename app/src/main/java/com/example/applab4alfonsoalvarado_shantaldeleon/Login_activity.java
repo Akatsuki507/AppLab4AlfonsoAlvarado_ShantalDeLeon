@@ -8,8 +8,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -17,12 +19,14 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Login_activity extends AppCompatActivity {
     ArrayList<user> users;
     private EditText User,pass;
     private Button Btn,Btn2;
+
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -32,6 +36,9 @@ public class Login_activity extends AppCompatActivity {
         loadData();
         User = (EditText)findViewById(R.id.Usuario);
         pass = (EditText)findViewById(R.id.Contraseña);
+         final Spinner spinners = (Spinner) findViewById(R.id.spinner2);
+
+
         Btn = (Button)findViewById(R.id.Boton);
         Btn2 =(Button)findViewById(R.id.Registrar);
 
@@ -40,13 +47,14 @@ public class Login_activity extends AppCompatActivity {
             public void onClick(View v) {
                 String USR = User.getText().toString();
                 String PASS = pass.getText().toString();
-                if (verificar(USR, PASS)){
-                    Intent i = new Intent(getApplicationContext(),welcome.class);
-                    startActivity(i);
+                if (verificar(USR,PASS)){
+
+                        Intent i = new Intent(getApplicationContext(), welcome.class);
+                        startActivity(i);
+
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"Usuario o Contraseña Erronea",Toast.LENGTH_SHORT).show();
-                }
+                    Toast.makeText(getApplicationContext(),"Usuario o Contraseña Erronea",Toast.LENGTH_SHORT).show(); }
             }
         });
 
@@ -59,6 +67,7 @@ public class Login_activity extends AppCompatActivity {
         });
 
     }
+
 
     private void saveCurrent_user(user usuario){
         SharedPreferences sharepreferences = getSharedPreferences("shared preference", MODE_PRIVATE);
@@ -81,14 +90,17 @@ public class Login_activity extends AppCompatActivity {
         if(users == null){
             users = new ArrayList<>();
         }
+        Log.e("USUARIOS", "==============================================LISTA DE USUARIOS====================================================");
+        Log.e("USUARIOS", "CANTIDAD DE USUARIOS: " + String.valueOf(users.size()));
         for (int counter = 0; counter < users.size(); counter++) {
-            Log.i("USUARIO", users.get(counter).email);
+            Log.e("USUARIOS", "| EMAIL: " + users.get(counter).email + "| NOMBRE: " + users.get(counter).nombre + "| ROL: " + users.get(counter).rol);
         }
+        Log.e("USUARIOS", "==============================================LISTA DE USUARIOS====================================================");
     }
 
-    private boolean verificar(String email, String pass){
+    private boolean verificar(String email, String pass ){
         for (int counter = 0; counter < users.size(); counter++) {
-            if((users.get(counter).email.equals(email)) && (users.get(counter).pass.equals(pass))){
+            if((users.get(counter).email.equals(email)) && (users.get(counter).pass.equals(pass)) ){
                 saveCurrent_user(users.get(counter));
                 return true;
             }

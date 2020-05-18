@@ -20,8 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="30dp"
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="#9c27b0"
@@ -32,7 +31,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="20dp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -43,7 +42,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -53,7 +52,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -66,7 +65,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10pt"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -87,6 +86,112 @@
             android:textStyle="italic"
 
             android:text="ISF-141" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#9c27b0"
+            android:textStyle="italic"
+            android:textSize="25sp"
+
+            android:text="Nombre de usuario" />
+
+        <TextView
+            android:id="@+id/Nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000"
+            android:textStyle="italic"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#9c27b0"
+            android:textStyle="italic"
+            android:textSize="25sp"
+
+            android:text="Correo de usuario" />
+
+        <TextView
+            android:id="@+id/Correo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#9c27b0"
+            android:textStyle="italic"
+            android:textSize="25sp"
+
+            android:text="Cedula" />
+
+        <TextView
+            android:id="@+id/identity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#9c27b0"
+            android:textStyle="italic"
+            android:textSize="25sp"
+
+            android:text="Rol" />
+
+        <TextView
+            android:id="@+id/Rol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000"
+            android:textStyle="italic"/>
+        <Button
+            android:id="@+id/Registrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20px"
+            android:background="#1a237e"
+            android:textColor="#E3F2FD"
+            android:textSize="20sp"
+            android:text="Registrar Usuario"/>
+
+
 
 
         <Button
