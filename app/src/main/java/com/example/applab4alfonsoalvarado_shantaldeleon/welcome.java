@@ -64,7 +64,6 @@ public class welcome extends AppCompatActivity {
         String json = sharepreferences.getString("current_user", null);
         Type type = new TypeToken<user>(){}.getType();
         usuario = gson.fromJson(json, type);
-<<<<<<< HEAD
         TextView tvnombre = (TextView)findViewById(R.id.Nombre);
         tvnombre.setText(usuario.nombre);
         TextView tvcorreo = (TextView)findViewById(R.id.Correo);
@@ -73,12 +72,10 @@ public class welcome extends AppCompatActivity {
         tvcedula.setText(usuario.cedula );
         TextView tvrol = (TextView)findViewById(R.id.Rol);
         tvrol.setText(usuario.rol );
-=======
+
         Log.e("USUARIOS", "==============================================USUARIO ACTUAL====================================================");
         Log.i("USUARIO", "| USUARIO: " + usuario + "| EMAIL: " + usuario.email + " | NOMBRE: " + usuario.nombre + "| PASS: " + usuario.pass + "| ROL: " +  usuario.rol);
         Log.e("USUARIOS", "==============================================USUARIO ACTUAL====================================================");
->>>>>>> f7eedfdcffe540acb8a3aa727493284f9dc37412
-
 
 
 
