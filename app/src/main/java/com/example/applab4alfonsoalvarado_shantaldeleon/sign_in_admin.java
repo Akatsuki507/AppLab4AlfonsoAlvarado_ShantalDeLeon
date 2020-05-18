@@ -29,13 +29,13 @@ public class sign_in_admin extends AppCompatActivity {
     ArrayList<user> users;
     ArrayList<user> users_archive;
     EditText nombre, cedula ,correo, contraseña;
-    Button Btn;
+    Button Btn, Btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in_admin);
-
+        loadArchiveData();
         Btn = (Button)findViewById(R.id.Boton);
         Btn.setOnClickListener(new View.OnClickListener(){
 
@@ -44,6 +44,9 @@ public class sign_in_admin extends AppCompatActivity {
                 Registro();
             }
         });
+
+
+
         this.Inicializar();
     }
     private void Inicializar(){
@@ -68,8 +71,8 @@ public class sign_in_admin extends AppCompatActivity {
             users_archive.add(nuevo_usuario);
             saveArchiveData();
             Toast.makeText(this, "Registro Completo", Toast.LENGTH_SHORT).show();
-            Intent login = new Intent(this, Login_activity.class);
-            startActivity(login);
+            Intent welcome = new Intent(this, welcome.class);
+            startActivity(welcome);
         }
     }
 
@@ -102,9 +105,12 @@ public class sign_in_admin extends AppCompatActivity {
             if(users_archive == null){
                 users_archive = new ArrayList<>();
             }
+            Log.e("USUARIOS", "==============================================LISTA DE USUARIOS DE ARCHIVO====================================================");
+            Log.e("USUARIOS", "CANTIDAD DE USUARIOS: " + users_archive.size());
             for (int counter = 0; counter < users_archive.size(); counter++) {
-                Log.i("USUARIO", users_archive.get(counter).email);
+                Log.e("USUARIOS", "| EMAIL: " + users_archive.get(counter).email + "| NOMBRE: " + users_archive.get(counter).nombre + "| ROL: " + users_archive.get(counter).rol);
             }
+            Log.e("USUARIOS", "==============================================LISTA DE USUARIOS DE ARCHIVO====================================================");
         }
         catch (Exception ex)
         {
