@@ -99,9 +99,12 @@ public class Login_activity extends AppCompatActivity {
         if(users == null){
             users = new ArrayList<>();
         }
+        Log.e("USUARIOS", "==============================================LISTA DE USUARIOS====================================================");
+        Log.e("USUARIOS", "CANTIDAD DE USUARIOS: " + String.valueOf(users.size()));
         for (int counter = 0; counter < users.size(); counter++) {
-            Log.i("USUARIO", users.get(counter).email);
+            Log.e("USUARIOS", "| EMAIL: " + users.get(counter).email + "| NOMBRE: " + users.get(counter).nombre + "| ROL: " + users.get(counter).rol);
         }
+        Log.e("USUARIOS", "==============================================LISTA DE USUARIOS====================================================");
     }
 
     private boolean verificar(String email, String pass,String rol ){

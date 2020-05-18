@@ -28,8 +28,10 @@ public class welcome extends AppCompatActivity {
         String json = sharepreferences.getString("current_user", null);
         Type type = new TypeToken<user>(){}.getType();
         usuario = gson.fromJson(json, type);
+        Log.e("USUARIOS", "==============================================USUARIO ACTUAL====================================================");
+        Log.i("USUARIO", "| USUARIO: " + usuario + "| EMAIL: " + usuario.email + " | NOMBRE: " + usuario.nombre + "| PASS: " + usuario.pass + "| ROL: " +  usuario.rol);
+        Log.e("USUARIOS", "==============================================USUARIO ACTUAL====================================================");
 
-        Log.i("USUARIO", "USUARIO: " + usuario + "EMAIL: " + usuario.email + "----" + "NOMBRE: " + usuario.nombre + usuario.pass + usuario.rol);
 
     }
 
